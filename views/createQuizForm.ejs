@@ -1,0 +1,34 @@
+<% include partials/header.ejs %>
+    <body>
+        <header>
+            <div class="container">
+                <% include partials/navbar.ejs %>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1><%= pageTitle %></h1>
+                <% include ./partials/messages %>
+            </div>
+            <div class="container">
+                <form class="quiz-form" action="/save-quiz" method="POST">
+                    <div class="form-group">
+                        <label for="quiz-name-input" id="quiz-name">Enter quiz name</label>
+                        <input class="form-control" type="text" name="quizName" id="quiz-name-input"/>
+                    </div>
+                    <div>
+                        <button type="button" id="add-question-button" class="btn btn-secondary">Add a question</button>
+                    </div>
+                    <div>
+                        <button id="quiz-submit-button" class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <div class="container">
+            <% include partials/footer.ejs %>
+        </div>
+    </body>
+</html>

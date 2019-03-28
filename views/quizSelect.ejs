@@ -1,0 +1,29 @@
+<% include partials/header.ejs %>
+    <body>
+        <header>
+            <div class="container">
+                <% include partials/navbar.ejs %>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1><%= pageTitle %></h1>
+            </div>
+            <div class="container">
+                <form name="quizSelectForm" onsubmit="setFormAction(window.location.href, document.quizSelectForm)" method="POST">
+                    <select name="quizzes">
+                        <% quizzes.forEach(quiz => { %>
+                            <option name=<%- quiz.quizName %>><%- quiz.quizName %></option>
+                        <% }); %>
+                    </select>
+                    <button class="btn btn-primary" type="submit">Go!</button>
+                </form>
+            </div>
+        </main>
+
+        <div class="container">
+            <% include partials/footer.ejs %>
+        </div>
+    </body>
+</html>

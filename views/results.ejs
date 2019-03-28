@@ -1,0 +1,40 @@
+<% include partials/header.ejs %>
+    <body>
+        <header>
+            <div class="container">
+                <% include partials/navbar.ejs %>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1><%= pageTitle %></h1>
+            </div>
+            <div class="container">
+                <% for(let i = 0; i < quizQuestions.length; i ++) { %>
+                    <h5><%- quizQuestions[i] %></h5>
+                    <% if(submittedAnswers[i] === correctAnswers[i]){%>
+                        <div>
+                            <p class="correct-answer results"> <%- submittedAnswers[i] %> </p>
+                            <p class="results"> Correct! </p>
+                        </div>
+                    <%
+                        correctAnswerCount ++;
+                    }
+                    else{
+                    %>
+                        <div>
+                            <p class="incorrect-answer results"> <%- submittedAnswers[i] %> </p>
+                            <p class="results"> Incorrect. The correct answer is <%- correctAnswers[i] %> </p>
+                        </div>
+                    <% }} %>
+
+                    <p>You answered <%- correctAnswerCount %> questions correctly</p>
+            </div>
+        </main>
+
+        <div class="container">
+            <% include partials/footer.ejs %>
+        </div>
+    </body>
+</html>

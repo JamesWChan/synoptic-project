@@ -1,0 +1,106 @@
+button {
+    margin: .5em;
+}
+
+h1 {
+    color: orange;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn-block {
+    background-color: #53bbfc;
+    border: none;
+}
+
+.btn-block:hover{
+    color: white;
+    background-color: #4aa6e0;
+}
+
+.btn.btn-primary.btn-block, .close {
+    margin: 0;
+}
+
+.btn-secondary {
+    background-color: #53bbfc;
+    border: none;
+}
+
+.btn-secondary:hover {
+    color: white;
+    background-color: #4aa6e0;
+}
+
+.correct-answer {
+    color: green;
+}
+
+.correct-button {
+    margin: 0 0 0 .5em;
+    background-color: green;
+}
+
+.create-account-prompt {
+    text-align: center;
+}
+
+.delete-button {
+    margin: 0 0 0 .5em;
+    background-color: #EB6864;
+}
+
+.incorrect-answer {
+    background-color: #EB6864;
+}
+
+.input-group {
+    margin-bottom: 1em;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-form-input{
+    width: 30%;
+    margin-left: 35%;
+}
+
+.quiz-link {
+    background-color: #53bbfc;
+    border-radius: 1em;
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: .5em;
+    text-align: center;
+    padding: 2.5em;
+}
+
+.quiz-link a {
+    color: white;
+}
+
+.quiz-link-container {
+    text-align: center;
+}
+
+.quiz-link:hover {
+    background-color: #4aa6e0;
+}
+
+.results {
+    display: inline-block;
+}
+
+#quiz-name {
+    font-size: 2em;
+}
+
+#welcome-title {
+    margin: 1em 0 2em 0;
+    text-decoration: underline;
+}

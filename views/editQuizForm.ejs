@@ -1,0 +1,48 @@
+<% include partials/header.ejs %>
+    <body>
+        <header>
+            <div class="container">
+                <% include partials/navbar.ejs %>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1><%= pageTitle %></h1>
+            </div>
+            <div class="container">
+                <form class="quiz-form" action="/save-quiz-changes" method="POST">
+                    <div class="form-group">
+                        <input type="hidden" name="quizName" value="<%- pageTitle %>" />
+                    </div>
+                    <% questions.forEach((question) => { %>
+                        <div class="form-group">
+                            <label for="question<%- (questions.indexOf(question) + 1) %>">Edit question: </label>
+                            <div class="input-group question-group">
+                                <input class="form-control question-input" name="question<%- (questions.indexOf(question) + 1) %>" value="<%- question %>" id="question<%- (questions.indexOf(question) + 1) %>">
+                                <button name="delete-question" type="button" class="btn btn-secondary delete-button">x</button>
+                            </div>
+                            <% answers[questions.indexOf(question)].forEach((answer) => { %>
+                                <label for="question<%- (questions.indexOf(question) + 1) %>Answers[]">Edit answer: </label>
+                                <div class="input-group answer-group">
+                                    <input class="form-control answer-input" name="question<%- (questions.indexOf(question) + 1) %>Answers[]" value="<%- answer %>" id="question<%- (questions.indexOf(question) + 1) %>Answers[]">
+                                    <button name="delete-answer" type="button" class="btn btn-secondary delete-button">x</button>
+                                </div>
+                            <% }); %>
+                            <button type="button" name="add-answer-button" class="btn btn-secondary">Add answer</button>
+                        </div>
+                    <% }); %>
+                    <div>
+                        <button type="button" id="add-question-button" class="btn btn-secondary">Add a question</button>
+                    </div>
+                    <button class="btn btn-primary">Save quiz</button>
+                </form>
+
+            </div>
+        </main>
+
+        <div class="container">
+            <% include partials/footer.ejs %>
+        </div>
+    </body>
+</html>

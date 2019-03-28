@@ -1,0 +1,36 @@
+<% include partials/header.ejs %>
+    <body>
+        <header>
+            <div class="container">
+                <% include partials/navbar.ejs %>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1><%= pageTitle %></h1>
+            </div>
+            <div class="container">
+                <form action="/results" method="POST">
+                    <input type="hidden" name="quizName" value="<%- pageTitle %>" />
+                    <% questions.forEach((question) => { %>
+                        <div class="form-group">
+                            <h5><%- question %></h5>
+                            <% answers[questions.indexOf(question)].forEach((answer) => { %>
+                                <div>
+                                    <input type="radio" name="question<%- (questions.indexOf(question) + 1) %>Answers" value="<%- answer %>">
+                                    <label for="<% answer %>"><%- answer %></label>
+                                </div>
+                            <% }); %>
+                        </div>
+                    <% }); %>
+                        <button id="check-answers" class="btn btn-primary">Check answers</button>
+                </form>
+            </div>
+        </main>
+
+        <div class="container">
+            <% include partials/footer.ejs %>
+        </div>
+    </body>
+</html>
