@@ -19,13 +19,13 @@
                         <div class="form-group">
                             <label for="question<%- (questions.indexOf(question) + 1) %>">Edit question: </label>
                             <div class="input-group question-group">
-                                <input class="form-control question-input" name="question<%- (questions.indexOf(question) + 1) %>" value="<%- question %>" id="question<%- (questions.indexOf(question) + 1) %>">
+                                <input class="form-control question-input" name="question<%- (questions.indexOf(question) + 1) %>" value="<%- question %>" id="question<%- (questions.indexOf(question) + 1) %>" required>
                                 <button name="delete-question" type="button" class="btn btn-secondary delete-button">x</button>
                             </div>
                             <% answers[questions.indexOf(question)].forEach((answer) => { %>
                                 <label for="question<%- (questions.indexOf(question) + 1) %>Answers[]">Edit answer: </label>
                                 <div class="input-group answer-group">
-                                    <input class="form-control answer-input" name="question<%- (questions.indexOf(question) + 1) %>Answers[]" value="<%- answer %>" id="question<%- (questions.indexOf(question) + 1) %>Answers[]">
+                                    <input class="form-control answer-input" name="question<%- (questions.indexOf(question) + 1) %>Answers[]" value="<%- answer %>" id="question<%- (questions.indexOf(question) + 1) %>Answers[]" required>
                                     <button name="delete-answer" type="button" class="btn btn-secondary delete-button">x</button>
                                 </div>
                             <% }); %>

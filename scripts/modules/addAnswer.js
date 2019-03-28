@@ -34,6 +34,7 @@ export let addAnswer = (target) => {
     answerInput.setAttribute('class', 'form-control answer-input');
     answerInput.setAttribute('name', assignNameAttribute(answerInput));
     answerInput.setAttribute('id', assignNameAttribute(answerInput));
+    answerInput.required = true;
     answerLabel.setAttribute('for', assignNameAttribute(answerInput));
     deleteButton.setAttribute('name', 'delete-answer');
     deleteButton.setAttribute('type', 'button');
