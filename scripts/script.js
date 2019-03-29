@@ -1,6 +1,6 @@
-import {addQuestion} from './modules/addQuestion';
-import {deleteFormGroup} from './modules/deleteFormGroup';
-import {addAnswer} from './modules/addAnswer';
+import {addQuestion} from './modules/frontend/addQuestion';
+import {deleteFormGroup} from './modules/frontend/deleteFormGroup';
+import {addAnswer} from './modules/frontend/addAnswer';
 
 let addQuestionButton = document.querySelector('#add-question-button');
 let form = document.querySelector('form');

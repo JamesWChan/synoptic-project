@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const ensureAuthenticated = require('../config/auth');
-const extractAnswers = require('../scripts/modules/extractAnswers');
-const saveQuestionsAndAnswers = require('../scripts/modules/saveQuestionsAndAnswers');
-const findAllQuizzes = require('../scripts/modules/findAllQuizzes');
-const findQuiz = require('../scripts/modules/findQuiz');
-const shuffleArray = require('../scripts/modules/shuffleArray');
+const extractAnswers = require('../scripts/modules/backend/extractAnswers');
+const saveQuestionsAndAnswers = require('../scripts/modules/backend/saveQuestionsAndAnswers');
+const findAllQuizzes = require('../scripts/modules/backend/findAllQuizzes');
+const findQuiz = require('../scripts/modules/backend/findQuiz');
+const shuffleArray = require('../scripts/modules/backend/shuffleArray');
 const Quiz = require('../models/Quiz');
 
 router.get('/', (req, res) => {
