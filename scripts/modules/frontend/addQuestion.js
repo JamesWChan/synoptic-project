@@ -52,5 +52,6 @@ export let addQuestion = () => {
     questionInput.setAttribute('class', 'form-control question-input');
     questionInput.setAttribute('name', assignNameAttribute(questionInput));
     questionInput.setAttribute('id', assignNameAttribute(questionInput));
+    questionInput.required = true;
     questionLabel.setAttribute('for', assignNameAttribute(questionInput));
 };
