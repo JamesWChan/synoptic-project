@@ -11,7 +11,7 @@
                 <h1><%= pageTitle %></h1>
             </div>
             <div class="container">
-                <form action="/results" method="POST">
+                <form action="/quiz/results" method="POST">
                     <input type="hidden" name="quizName" value="<%- pageTitle %>" />
                     <% questions.forEach((question) => { %>
                         <div class="form-group">

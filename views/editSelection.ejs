@@ -11,7 +11,7 @@
                 <h1><%= pageTitle %></h1>
             </div>
             <div class="container">
-                <form name="quizSelection" action="/edit-quiz" method="POST">
+                <form name="quizSelection" action="/quiz/edit-quiz" method="POST">
                     <select name="quizzes">
                         <% quizzes.forEach(quiz => { %>
                             <option name=<%- quiz.quizName %>><%- quiz.quizName %></option>
