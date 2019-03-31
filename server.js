@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
+const bodyParser = require('body-parser');
 const session = require('express-session');
 
 const app = express();
@@ -29,7 +30,7 @@ app.use(express.static('public'));
 app.use(express.static('dist'));
 
 // Express body parser
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Express session
 app.use(
